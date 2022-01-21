@@ -1,4 +1,16 @@
+def print_calendar():
+   import datetime
+   import calendar
+   year = datetime.datetime.now()
+   print(calendar.calendar(year.year))
 
+
+  def delete_event(events):
+    events.remove
+
+
+  def show_events(events):
+      print (events)
 def addevents (events):
 
     print("You have chosen to add an event.")
