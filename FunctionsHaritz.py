@@ -5,11 +5,13 @@ def print_calendar():
    print(calendar.calendar(year.year))
 
 
-  def delete_event(events):
-    events.remove
+def delete_event(events):
+
+    del events[:]
+    print(events)
 
 
-  def show_events(events):
+def show_events(events):
       print (events)
 def addevents (events):
 
@@ -41,21 +43,26 @@ def triangle():
     print("\n".join(fila))
 
 def rombous():
-    n = int(input("Enter the height of the rhombus: "))
+    size = int(input("Enter the height of the rhombus: "))
+    row = 1
+    while (size >= row):
+        for col in range(0, (size - row)):
+            print(" ", end=" ")
+        for ast in range(0, ((row * 2) - 1)):
+            print("*", end=" ")
+        print("\n")
+        row = row + 1
 
-    for x  in range(1,(n + 5)//2 + 1):
-        for y in range((n + 5)//2 - x):
-            print(" ", end = "")
-        for z in range((x * 2) - 1):
-            print("*", end= "")
-        print()
+    row = size - 1
+    while (row >= 0):
+        for col in range(0, (size - row)):
+            print(" ", end=" ")
+        for ast in range(0, ((row * 2) - 1)):
+            print("*", end=" ")
+        print("\n")
+        row = row - 1
 
-    for x in range((n + 5) // 2 + 1, n + 5):
-        for y in range(x - (n + 5) // 2):
-            print(" ", end="")
-        for z in range((n + 5 - x) * 2 - 1):
-            print("*", end="")
-        print()
+
 def drawingMachine ():
 
     print("WELCOME TO THE DRAWING MACHINE!")
@@ -65,11 +72,12 @@ def drawingMachine ():
     print("1.- Drawing a pyramid.")
     print("2.- Drawing a triangle.")
     print("3.- Dawing a rombous.")
-    print("4.- Drawing a number trinagle.")
+
+
     print("5.- Exit program.")
     print("Enter the number of the exercise: ")
 
-    option = input("Please, enter the number depending of the drawing you want to draw.")
+    option = int(input("Please, enter the number depending of the drawing you want to draw."))
 
     if option == 1:
         pyramid()
@@ -78,3 +86,12 @@ def drawingMachine ():
     if option == 3:
         rombous()
 
+def howManyEvents(events):
+    numberOfElements = len(events)
+
+    print("Number of events active ", numberOfElements)
+
+def deleteEventPosition(events):
+  numberEvent = int(input("Select the position of the event: "))
+    del events[numberEvent]
+    print(events)

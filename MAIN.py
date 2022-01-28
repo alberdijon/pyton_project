@@ -12,7 +12,7 @@ while option!=10:
     print("4--Search if a day have events or not")
     print("5--Search event by name")
     print("6--Show events")
-    print("7--Playu Rock,Paper,Scissors")
+    print("7--Play Rock,Paper,Scissors")
     print("8--Show how many events are added.")
     print("9-Dawing machine.")
     print("10--Exit")
@@ -26,7 +26,9 @@ while option!=10:
     if option == 6:
         show_events(list_events)
     if option == 3:
-        delete_events(list_events)
+        delete_event(list_events)
+    if option == 8:
+        howManyEvents(list_events)
 
 
 
