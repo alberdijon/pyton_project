@@ -26,7 +26,7 @@ while option!=10:
     if option == 6:
         show_events(list_events)
     if option == 3:
-        delete_event(list_events)
+        deleteEventPosition(list_events)
     if option == 8:
         howManyEvents(list_events)
 

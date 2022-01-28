@@ -15,6 +15,7 @@ def show_events(events):
       print (events)
 def addevents (events):
 
+
     print("You have chosen to add an event.")
     event_num = int(input("How many events you want to add?"))
     i = 0
@@ -92,6 +93,46 @@ def howManyEvents(events):
     print("Number of events active ", numberOfElements)
 
 def deleteEventPosition(events):
-  numberEvent = int(input("Select the position of the event: "))
-    del events[numberEvent]
+    a = len(events)
+    print(a)
+    i=0
+    while i < a:
+        print(i+1,end=" ")
+        print(events[i])
+        i=i+1
+
+    numberEvent = int(input("Select the position of the event: "))
+    events.pop(numberEvent-1)
     print(events)
+
+def ex1():
+
+    lista=[]
+    for x in range(1500, 2701):
+        if (x % 7 == 0) and (x % 5 == 0):
+            lista.append(str(x))
+    print(','.join(lista))
+
+def ex4():
+    numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20)
+    odd = 0
+    even = 0
+    for x in numbers:
+        if not x % 2:
+            even += 1
+        else:
+            odd += 1
+    print("Number of even numbers :", even)
+    print("Number of odd numbers :", odd)
+def ex10():
+
+    number = input("Enter the number yo want to see the multiplication table: ")
+    for i in range(1, 11):
+        print(number, 'x', i, '=', number * i)
+def ex11():
+    numbers = []
+    for i in range(100, 401):
+        s = str(i)
+        if (int(s[0]) % 2 == 0) and (int(s[1]) % 2 == 0) and (int(s[2]) % 2 == 0):
+            numbers.append(s)
+    print(",".join(numbers))
