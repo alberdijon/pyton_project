@@ -1,10 +1,4 @@
 def rock_paper_scisors():
-    def winning(play_again):
-        print("Congratulations you won!!!  :)")
-        play_again = int(input(" Do you want to play again 1 for yes 2 for no"))
-    def loosing (play_again):
-        print("Bad luck you losed :(")
-        play_again = int(input(" Do you want to play again 1 for yes 2 for no"))
     def main_game(play_again, players_choice):
         while play_again != 2:
             print("1 for Rock \n"
@@ -61,5 +55,3 @@ def rock_paper_scisors():
                   "8-When the game ends you will decide to play again or finish")
 
 rock_paper_scisors()
-
-#PATATA
