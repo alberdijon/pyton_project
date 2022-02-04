@@ -53,5 +53,3 @@ def rock_paper_scisors():
                   "6-You will decide what do you select\n"
                   "7-Once you decide the result will be shown on the screen \n"
                   "8-When the game ends you will decide to play again or finish")
-
-rock_paper_scisors()

@@ -1,3 +1,4 @@
+from ExerciseExample import *
 def print_calendar():
    import datetime
    import calendar
@@ -147,7 +148,11 @@ def exercises():
         print("2.- Python program to count the number of even and odd numbers from a series of numbers. ")
         print("3.- Python program to create the multiplication table (from 1 to 10) of a number.")
         print("4.- Python program to construct the number triangle pattern")
-        print("5.- Exit program.")
+        print("5.- Python program to find numbers between 100 and 400 (both included) where each digit of a number is an even number.")
+        print("6.- Python program to get the smallest number from a list")
+        print("7.- Python program to remove duplicates from a list.")
+        print("8.- Python program to check a list is empty or not.")
+        print("9.- Exit program.")
         print("Enter the number of the exercise: ")
 
         option = int(input("Please, enter the number depending of the drawing you want to draw."))
@@ -160,4 +165,12 @@ def exercises():
             ex10()
         if option == 4:
             ex11()
+        if option == 5:
+            exercise14()
+        if option == 6:
+            exercise19()
+        if option == 7:
+            exercise20()
+        if option == 8:
+            exercise21()
 
