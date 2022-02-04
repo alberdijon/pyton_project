@@ -5,7 +5,7 @@ from rock_paper_scisors import *
 list_events = []
 
 option=24
-while option!=11:
+while option!=9:
     print("THE CALENDAR MENU (Choose a task typing its number!)")
     print("==================================================")
     print("1--Print calendar")

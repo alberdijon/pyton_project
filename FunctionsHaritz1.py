@@ -67,7 +67,7 @@ def rombous():
 
 def drawingMachine ():
     option = 24
-    while option != 3:
+    while option != 4:
         print("WELCOME TO THE DRAWING MACHINE!")
         print("=========================")
         print("What do you want to draw?")
@@ -125,10 +125,10 @@ def ex4():
     print("Number of even numbers :", even)
     print("Number of odd numbers :", odd)
 def ex10():
-
-    number = input("Enter the number yo want to see the multiplication table: ")
-    for i in range(1, 11):
-        print(number, 'x', i, '=', number * i)
+    number = int(input("Enter the number you want to see the multiplication table: "))
+    print("The Multiplication Table of: ", number)
+    for count in range(1, 11):
+        print(number, 'x', count, '=', number * count)
 def ex11():
     filas = int(input("Enter his number of rows: "))
     filas = filas + 1
@@ -139,7 +139,7 @@ def ex11():
 
 def exercises():
     option = 24
-    while option != 5:
+    while option != 9:
         print("EXERCISES MENU")
         print("=========================")
         print("CHOOSE AN EXERCISE: ")
@@ -155,7 +155,7 @@ def exercises():
         print("9.- Exit program.")
         print("Enter the number of the exercise: ")
 
-        option = int(input("Please, enter the number depending of the drawing you want to draw."))
+        option = int(input("Please, enter the number of the exercise you want to see: "))
 
         if option == 1:
             ex1()
