@@ -1,9 +1,9 @@
-from CALENDAR.FunctionsHaritz import *
+from FunctionsHaritz import *
 
 list_events = []
 
 option=24
-while option!=10:
+while option!=11:
     print("THE CALENDAR MENU (Choose a task typing its number!)")
     print("==================================================")
     print("1--Print calendar")
@@ -15,8 +15,9 @@ while option!=10:
     print("7--Play Rock,Paper,Scissors")
     print("8--Show how many events are added.")
     print("9-Dawing machine.")
-    print("10--Exit")
-    option= int(input("Enter an option from the menu"))
+    print("10--Exercises.")
+    print("11--Exit")
+    option= int(input("Enter the number of an option from the menu: "))
     if option==1:
         print_calendar()
     if option==2:
@@ -29,6 +30,9 @@ while option!=10:
         deleteEventPosition(list_events)
     if option == 8:
         howManyEvents(list_events)
+    if option == 10:
+        exercises()
+
 
 
 

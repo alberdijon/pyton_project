@@ -65,27 +65,26 @@ def rombous():
 
 
 def drawingMachine ():
+    option = 24
+    while option != 3:
+        print("WELCOME TO THE DRAWING MACHINE!")
+        print("=========================")
+        print("What do you want to draw?")
+        print("=========================")
+        print("1.- Drawing a pyramid.")
+        print("2.- Drawing a triangle.")
+        print("3.- Dawing a rombous.")
+        print("4.- Exit program.")
+        print("Enter the number of the exercise: ")
 
-    print("WELCOME TO THE DRAWING MACHINE!")
-    print("=========================")
-    print("What do you want to draw?")
-    print("=========================")
-    print("1.- Drawing a pyramid.")
-    print("2.- Drawing a triangle.")
-    print("3.- Dawing a rombous.")
+        option = int(input("Please, enter the number depending of the drawing you want to draw."))
 
-
-    print("5.- Exit program.")
-    print("Enter the number of the exercise: ")
-
-    option = int(input("Please, enter the number depending of the drawing you want to draw."))
-
-    if option == 1:
-        pyramid()
-    if option == 2:
-        triangle()
-    if option == 3:
-        rombous()
+        if option == 1:
+            pyramid()
+        if option == 2:
+            triangle()
+        if option == 3:
+            rombous()
 
 def howManyEvents(events):
     numberOfElements = len(events)
@@ -130,9 +129,35 @@ def ex10():
     for i in range(1, 11):
         print(number, 'x', i, '=', number * i)
 def ex11():
-    numbers = []
-    for i in range(100, 401):
-        s = str(i)
-        if (int(s[0]) % 2 == 0) and (int(s[1]) % 2 == 0) and (int(s[2]) % 2 == 0):
-            numbers.append(s)
-    print(",".join(numbers))
+    filas = int(input("Enter his number of rows: "))
+    filas = filas + 1
+    for i in range(filas):
+        for j in range(i):
+            print(i, end=' ')
+        print('')
+
+def exercises():
+    option = 24
+    while option != 5:
+        print("EXERCISES MENU")
+        print("=========================")
+        print("CHOOSE AN EXERCISE: ")
+        print("=========================")
+        print("1.- Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700 (both included). ")
+        print("2.- Python program to count the number of even and odd numbers from a series of numbers. ")
+        print("3.- Python program to create the multiplication table (from 1 to 10) of a number.")
+        print("4.- Python program to construct the number triangle pattern")
+        print("5.- Exit program.")
+        print("Enter the number of the exercise: ")
+
+        option = int(input("Please, enter the number depending of the drawing you want to draw."))
+
+        if option == 1:
+            ex1()
+        if option == 2:
+            ex4()
+        if option == 3:
+            ex10()
+        if option == 4:
+            ex11()
+
