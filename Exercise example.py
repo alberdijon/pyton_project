@@ -21,5 +21,14 @@ def exercise20():
             final_list.append(x)
     print(final_list)
 
-exercise14()
+def exercise19():
+    list1 = []
+    num = int(input("Enter number of elements in list: "))
+    for i in range(1, num + 1):
+        numbs = int(input("Enter elements: "))
+        list1.append(numbs)
+
+    print("Smallest element is:", min(list1))
+
+exercise19()
 
