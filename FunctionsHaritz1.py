@@ -1,4 +1,5 @@
 from ExerciseExample import *
+import os
 def print_calendar():
    import datetime
    import calendar
@@ -24,6 +25,7 @@ def addevents (events):
         event = input("Enter the event you have and specify thr date.")
         events.append(event)
         i += 1
+    f = open("events.txt", "w+")
 
 def pyramid ():
     n = int(input("Enter the height of the pyramid: "))
@@ -173,4 +175,41 @@ def exercises():
             exercise20()
         if option == 8:
             exercise21()
+
+def saveEventsInAfile(le):
+
+    print("Save events in a txt file.")
+    print("==================================================")
+    print("1--Rewrite")
+    print("2--Add")
+
+    option = int(input("Enter the number of an option from the menu: "))
+    if option == 1:
+        f = open("events.txt", "w+")
+
+        for element in le:
+            f.write(element + "\n")
+        f.close()
+    if option == 2:
+        f = open("events.txt", "a+")
+
+        for element in le:
+            f.write(element + "\n")
+        f.close()
+
+
+def showDocument():
+    f = open("events.txt", "r")
+    a = 1
+    while a != 0:
+        file_line = f.readline()
+        if not file_line:
+            print("End Of File")
+            a = 0
+        else:
+            print(file_line)
+            print("")
+            print(a)
+            a = a + 1
+    f.close()
 

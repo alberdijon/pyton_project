@@ -5,7 +5,7 @@ from rock_paper_scisors import *
 list_events = []
 
 option=24
-while option!=9:
+while option!=11:
     print("THE CALENDAR MENU (Choose a task typing its number!)")
     print("==================================================")
     print("1--Print calendar")
@@ -16,7 +16,10 @@ while option!=9:
     print("6--Show how many events are added.")
     print("7-Dawing machine.")
     print("8--Exercises.")
-    print("9-Exit")
+    print("9--Save events in a txt file.")
+    print("10--Show the txt file with the events")
+    print("11-Exit")
+
     option= int(input("Enter the number of an option from the menu: "))
     if option==1:
         print_calendar()
@@ -34,6 +37,10 @@ while option!=9:
         exercises()
     if option == 5:
         rock_paper_scisors()
+    if option == 9:
+        saveEventsInAfile(list_events)
+    if option == 10:
+        showDocument()
 
 
 
