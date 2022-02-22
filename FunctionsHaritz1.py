@@ -141,7 +141,7 @@ def ex11():
 
 def exercises():
     option = 24
-    while option != 9:
+    while option != 10:
         print("EXERCISES MENU")
         print("=========================")
         print("CHOOSE AN EXERCISE: ")
@@ -154,7 +154,8 @@ def exercises():
         print("6.- Python program to get the smallest number from a list")
         print("7.- Python program to remove duplicates from a list.")
         print("8.- Python program to check a list is empty or not.")
-        print("9.- Exit program.")
+        print("9.- Python program to get the second smallest number from a list")
+        print("10.- Exit program.")
         print("Enter the number of the exercise: ")
 
         option = int(input("Please, enter the number of the exercise you want to see: "))
@@ -175,7 +176,30 @@ def exercises():
             exercise20()
         if option == 8:
             exercise21()
+        if option == 9:
+            secondSmallestNumber()
+def secondSmallestNumber():
+    nums = []
+    print(end="Enter the Size of List: ")
+    listSize = int(input())
+    print(end="Enter " + str(listSize) + " Numbers for List: ")
+    for i in range(listSize):
+        nums.append(int(input()))
 
+    small = nums[0]
+    for i in range(listSize):
+        if small > nums[i]:
+            small = nums[i]
+
+    secondSmall = nums[1]
+    for i in range(listSize):
+        if secondSmall > nums[i] and nums[i] != small:
+            secondSmall = nums[i]
+
+    if small == secondSmall:
+        print("\nSecond Smallest Number doesn't exist!")
+    else:
+        print("\nSecond Smallest Number = " + str(secondSmall))
 def saveEventsInAfile(le):
 
     print("Save events in a txt file.")
