@@ -237,3 +237,25 @@ def showDocument():
             a = a + 1
     f.close()
 
+def findInFile():
+    string1 = input("Enter a string you want to search for: ")
+
+    file1 = open("events.txt")
+
+    flag = 0
+
+    for line in file1:
+        index = index + 1
+
+        # checking string is present in line or not
+        if string1 in line:
+            flag = 1
+            break
+
+    if flag == 0:
+        print('String', string1, 'Not Found')
+    else:
+        print('String', string1, 'Found In Line', index)
+
+    file1.close()
+
