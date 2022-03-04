@@ -191,7 +191,7 @@ def secondSmallestNumber():
         if small > nums[i]:
             small = nums[i]
 
-    secondSmall = nums[1]
+    secondSmall = nums[0]
     for i in range(listSize):
         if secondSmall > nums[i] and nums[i] != small:
             secondSmall = nums[i]
